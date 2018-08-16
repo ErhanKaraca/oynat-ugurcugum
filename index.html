@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oynat Uğurcuğum</title>
+</head>
+<style>
+    body{
+        background:#efefef;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    ul{
+        width:200px;
+        list-style: none;
+        padding:0;
+        margin:0;
+    }
+    ul li{
+        opacity: 0;
+        -webkit-transform: translate3d(30%,0,0);
+        transform: translate3d(30%,0,0);
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+    ul li a{
+        padding:15px;
+        margin-bottom:5px;
+        display: block;
+        background-color: #fff;
+        color:#424e58;
+        text-decoration: none;
+        box-shadow: 1px 1px 1px #ddd;
+    }
+</style>
+<body>
+    
+    <ul>
+        <li><a href="https://turuncuweb.net">Turuncu Internet Solutions</a></li>
+        <li><a href="https://github.com">Github</a></li>
+        <li><a href="https://google.com">Google</a></li>
+        <li><a href="https://stackoverflow.com">StackOverflow</a></li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+    <script src="jquery-oynat-ugurcugum.js"></script>
+    <script>
+        $(function(){
+            $("ul").oynat_ugurcugum({
+                anim: "fadeInLeft",
+                duration: 0.05
+            });
+        });
+    </script>
+</body>
+</html>
