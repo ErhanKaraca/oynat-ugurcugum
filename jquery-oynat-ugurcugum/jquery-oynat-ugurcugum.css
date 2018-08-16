@@ -1,0 +1,17 @@
+.jou{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+.jou li {
+	opacity: 0;
+	-webkit-transform: translate3d(30%,0,0);
+	transform: translate3d(30%,0,0);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.jou li {
+	-webkit-transition-delay: 5s;
+	transition-delay: 5s;
+}

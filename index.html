@@ -4,49 +4,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oynat Uğurcuğum</title>
+    <link rel="stylesheet" href="jquery-oynat-ugurcugum/jquery-oynat-ugurcugum.css" />
 </head>
 <style>
     body{
         background:#efefef;
         font-family: Arial, Helvetica, sans-serif;
     }
-    ul{
-        width:200px;
-        list-style: none;
-        padding:0;
+    .header{
+        margin:25px auto !important;
+        padding-top:50px;
+        width:50%;        
+    }
+    .header h1{
         margin:0;
+        padding:0;
+    }
+    ul{
+        margin:50 auto !important;
+        width:50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
     ul li{
-        opacity: 0;
-        -webkit-transform: translate3d(30%,0,0);
-        transform: translate3d(30%,0,0);
-        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-        transition: transform 0.3s, opacity 0.3s;
+        flex:1;
+        width: 50%;
+        padding:25px;
+        display: block;
     }
     ul li a{
-        padding:15px;
-        margin-bottom:5px;
+        height: 200px;
+        position: relative;
+        padding:50px;
+        text-align: center;
         display: block;
         background-color: #fff;
         color:#424e58;
         text-decoration: none;
-        box-shadow: 1px 1px 1px #ddd;
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+        border-radius: 5px;
+        -webkit-transition: all 0.1s ease 0s;
+        -moz-transition: all 0.1s ease 0s;
+        -o-transition: all 0.1s ease 0s;
+        transition: all 0.1s ease 0s;
     }
+
+    ul li a:hover{
+        background-color: #735ED5;
+        color:#fff;
+    }
+
 </style>
 <body>
-    
-    <ul>
+    <div class="header">
+        <h1>Oynat Uğurcuğum</h1>
+        <p>Animated List Items</p>
+    </div>
+    <ul class="jou">
         <li><a href="https://turuncuweb.net">Turuncu Internet Solutions</a></li>
         <li><a href="https://github.com">Github</a></li>
         <li><a href="https://google.com">Google</a></li>
         <li><a href="https://stackoverflow.com">StackOverflow</a></li>
+        <li><a href="https://stackoverflow.com">StackOverflow</a></li>
+        <li><a href="https://stackoverflow.com">StackOverflow</a></li>
+        <li><a href="https://stackoverflow.com">StackOverflow</a></li>
+        <li><a href="https://stackoverflow.com">StackOverflow</a></li>
+        <li><a href="https://stackoverflow.com">StackOverflow</a></li>
+        <li><a href="https://stackoverflow.com">StackOverflow</a></li>
     </ul>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
-    <script src="jquery-oynat-ugurcugum.js"></script>
+    <script src="jquery-oynat-ugurcugum/jquery-oynat-ugurcugum.js"></script>
     <script>
         $(function(){
-            $("ul").oynat_ugurcugum({
+            $(".jou").oynat_ugurcugum({
                 anim: "fadeInLeft",
                 duration: 0.05
             });

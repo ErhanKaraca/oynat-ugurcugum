@@ -41,28 +41,20 @@
             }
         }
 
-        function getBaseAnimation(){
-            return {
-                "-webkit-transform": "translate3d(30%,0,0)",
-                "transform": "translate3d(30%,0,0)",
-                "opacity": "0",
-            }
-        }
-
-        function getAnimation(animName, duration){
+        function getAnimation(duration){
             return {
                 "-webkit-transform": "translate3d(0,0,0)",
                 "transform": "translate3d(0,0,0)",
                 "opacity": "1",
                 "transition-delay": duration + "s",
-            }
+            };
         }
 
         function setupList(){
             $el.find("li").each(function(index) {
                 var li = this;
                 var $li = $(this);
-                $li.css(getAnimation(options.anim, options.duration * (index + 1)));
+                $li.css(getAnimation(options.duration * (index + 1)));
             });
         }
 
@@ -105,7 +97,6 @@
     $.fn[pluginName].defaults = {
         onInit: function () { },
         onDestroy: function () { },
-        anim: "fadeInLeft",
         duration: 0.05,
     };
 
